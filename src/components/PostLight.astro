@@ -7,14 +7,11 @@ interface Props {
 const { post } = Astro.props;
 ---
 
-<article class="heti">
-  <header>
-    <div class="mt-2 text-3.5">
-      <time datetime={`${formatDate(post.data.pubDate)}`}>
-        {formatDate(post.data.pubDate)}
-      </time>
-      <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
-    </div>
-  </header>
-  <slot />
-</article>
+<li class="mt-2 text-3.5">
+  <span class="italic mr-3">
+    <time datetime={`${formatDate(post.data.pubDate)}`}>
+      {formatDate(post.data.pubDate)}
+    </time>
+  </span>
+  <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
+</li>
