@@ -19,7 +19,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-a,
+/* a, */
 article.heti a,
 article.heti a code {
   transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
