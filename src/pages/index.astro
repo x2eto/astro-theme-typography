@@ -4,7 +4,7 @@ import PostLight from "~/components/PostLight.astro";
 import { getPosts } from "~/utils";
 import Pagination from "~/components/Pagination.astro";
 
-const posts = (await getPosts()).slice(0, 5);
+const posts = (await getPosts()).slice(0, 10);
 
 const { translate: t } = Astro.locals;
 ---
