@@ -7,8 +7,8 @@ interface Props {
 const { post } = Astro.props;
 ---
 
-<li class="mt-2 text-3.5">
-  <span class="italic mr-3">
+<li class="flex mt-2 text-3.5">
+  <span class="italic grow-0 shrink-0 basis-24">
     <time datetime={`${formatDate(post.data.pubDate)}`}>
       {formatDate(post.data.pubDate)}
     </time>

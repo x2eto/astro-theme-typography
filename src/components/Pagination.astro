@@ -19,25 +19,25 @@ const { showLeft = true, showRight = true, leftTitle, rightTitle, leftUrl, right
 ---
 
 <footer class="mt-5">
-  {
-    showPageCount && (
-      <p class="mb-2.5">
-        {t('page_number', currentPage)} / {t('page_count', totalPage)}
-      </p>
-    )
-  }
-  <p class="flex items-center gap-2">
+  <p class="relative text-center gap-2">
     {
       showLeft && (
-        <span class="inline-flex items-center">
+        <span class="absolute left-0 inline-flex items-center">
           <i class="i-mdi-chevron-double-left icon" />
           <a href={leftUrl}>{leftTitle}</a>
         </span>
       )
     }
+     {
+      showPageCount && (
+        <span>
+          {t('page_number', currentPage)} / {t('page_count', totalPage)}
+        </span>
+      )
+    }
     {
       showRight && (
-        <span class="inline-flex items-center">
+        <span class="absolute right-0 inline-flex items-center">
           <a href={rightUrl}>{rightTitle}</a>
           <i class="i-mdi-chevron-double-right icon" />
         </span>

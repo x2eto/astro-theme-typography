@@ -10,18 +10,20 @@ const year = new Date().getFullYear()
 const { website, author } = Astro.locals.config
 ---
 
-<footer font-bold text-3 un-flex="~ col gap-1" un-lg="gap-3.5" {...attrs}>
-  <p>
+<footer font-bold text-3 un-flex="~ col gap-1" un-lg="~ row gap-3.5" {...attrs}>
+  <p text-center>
+    <span>
+      Built with
+      <a target="_blank" href="https://astro.build" rel="noopener noreferrer">Astro.</a>
+    </span>
+    <span>
+      Inspired by
+      <a target="_blank" href="https://github.com/Moeyua/astro-theme-typography" rel="noopener noreferrer">Typography.</a>
+    </span>
+  </p>
+  <span text-center>
     © {year}
     <a target="_blank" href={website} rel="noopener noreferrer">{author}</a>
-  </p>
-  <p>
-    Theme
-    <a target="_blank" href="https://github.com/Moeyua/astro-theme-typography" rel="noopener noreferrer">Typography</a>
-     by <a target="_blank" href="https://moeyua.com" rel="noopener noreferrer">Moeyua</a>
-  </p>
-  <p>
-    Proudly published with
-    <a target="_blank" href="https://astro.build" rel="noopener noreferrer">Astro</a>
-  </p>
+    . All Rights Reserved.
+  </span>
 </footer>
